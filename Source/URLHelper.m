@@ -9,7 +9,7 @@
 #import "URLHelper.h"
 #import "Tools.h"
 #import "CTMediator+CTMediatorModuleRCIMActions.h"
-#define WEB_HOST @"xm.hzxwwl.cn"
+#define WEB_HOST @""
 
 @implementation URLHelper
 
