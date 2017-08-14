@@ -18,6 +18,5 @@
 
 + (NSDictionary *) getDicFromUrl:(NSString *)url;
 
-+(void)actionWithURL:(NSString *)url withViewController:(UIViewController *)controller;
 
 @end

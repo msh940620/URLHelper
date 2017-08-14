@@ -5,33 +5,13 @@
 //  Created by Reminisce on 2016/12/6.
 //
 //
-
+#import "BaseViewController.h"
 #import "URLHelper.h"
 #import "Tools.h"
-#import "CTMediator+CTMediatorModuleRCIMActions.h"
+
 #define WEB_HOST @""
 
 @implementation URLHelper
-
-+(void)actionWithURL:(NSString *)url withViewController:(UIViewController *)controller{
-    
-    NSDictionary *temp = [URLHelper getDicFromUrl:url];
-    NSString *action;
-    if([Tools dicContain:temp withKey:@"action"]){
-       action = temp[@"action"];
-    }
-    if([action isEqualToString:@"ShowUserInfo"]){
-        NSString *userId = temp[@"userId"];
-        BaseViewController *friendInfoVC = [[CTMediator sharedInstance] CTMediator_friendInfoViewControllerWithID:userId];
-        if(controller.navigationController){
-        [controller.navigationController pushViewController:friendInfoVC animated:YES];
-        }else{
-            [controller presentViewController:friendInfoVC animated:YES completion:NO];
-        }
-    }
-    
-
-}
 
 
 + (NSString *) makeAppUrl:(NSDictionary *)params{
